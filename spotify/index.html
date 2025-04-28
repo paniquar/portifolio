@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cd1b109b7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Spotify</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <nav class="sidebar">
+                <div class="nav-logo">
+                    <i class="fa-brands fa-spotify"></i>
+                </div>
+                <div class="nav-biblioteca">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Sua Biblioteca +</p>
+                </div>
+                <div class="nav-playlist">
+                    <h5>Crie sua Primeira Playlist</h5>
+                    <p>É fácil! Vamos te ajudar!</p>
+                    <button>Criar Playlist</button>
+                </div>
+                <div class="nav-podcast">
+                    <h5>Que Tal Seguir um Podcast?</h5>
+                    <p>Avisaremos Você Sobre os Novos Episódios!</p>
+                    <button>Explore Podcast</button>
+                </div>
+                <div class="nav-footer">
+                    <a href="#">Legal</a>
+                    <a href="#">Centro de Privacidade</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Sobre Anúncios</a>
+                    <a href="#">Acessibilidade</a>
+                </div>
+                <button class="nav-idioma-botao">
+                    <i class="fa-solid fa-globe"></i>
+                    Português - Brasil
+                </button>
+            </nav>
+
+            <main>
+                <header class="barra-pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="O que você quer ouvir?">
+                </header>
+
+                <section class="content">
+                    <h2>Artistas Populares</h2>
+                    <div class="artists-grid">
+                        <!-- Inserido via JavaScript -->
+                    </div>
+
+                    <h2>Álbuns Populares</h2>
+                    <div class="albuns-grid">
+                        <!-- Inserido via JavaScript -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <div class="banner">
+            <div>
+                <h2>Testar o Premium de Graça</h2>
+                <p>Inscreva-se para curtir músicas ilimitadas só com alguns anúncios! Não precisa d eum cartão de
+                    crédito
+                </p>
+            </div>
+            <button>Inscreva-se Grátis!</button>
+        </div>
+
+        <script src="./scripts.js"></script>
+    </div>
+
+
+    <div class="player">
+        <div class="player-left">
+            <img id="player-img" src="./img/album-white-noise.jpg" alt="Capa do Álbum">
+            <div>
+                <h4 id="player-song">White Noise</h4>
+                <p id="player-artist">Sleep John</p>
+            </div>
+        </div>
+        <div class="player-center">
+            <button id="prev-btn"><i class="fa-solid fa-backward"></i></button>
+            <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+            <button id="next-btn"><i class="fa-solid fa-forward"></i></button>
+        </div>
+        <div class="player-right">
+            <input type="range" id="progress-bar" min="0" max="100" value="0">
+        </div>
+        <button id="play-pause-btn" aria-label="Tocar ou pausar música" tabindex="0">
+            <i class="fa-solid fa-play"></i>
+        </button>
+
+    </div>
+
+    <div class="time-info">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress-bar" min="0" max="100" value="0">
+        <span id="duration">0:00</span>
+    </div>
+</body>
+
+</html>

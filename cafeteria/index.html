@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Devclub café</title>
+  </head>
+  <body>
+    <div class="caixa-video">
+      <video src="videos/coffe.mp4" loop muted autoplay></video>
+      <div class="mascara"></div>
+      <!--mascara-->
+    </div>
+    <!--caixa-video-->
+
+    <header class="header">
+      <section>
+        <!--cabecario-->
+        <a href="#">
+          <img src="imagens/logo.png" alt="logo cafeteria" />
+        </a>
+
+        <nav>
+          <a href="#">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#" onclick="MostrarModal()">Onde estamos?</a>
+        </nav>
+      </section>
+      <!--cabeçario-->
+    </header>
+
+    <section class="caixa-principal">
+      <!--texto primeira página-->
+      <div>
+        <h3><span>CODE</span> com o melhor café da região!</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis eius
+          nam voluptatum, dolor voluptatibus quibusdam ipsa non ex soluta
+          laudantium possimus delectus consequuntur temporibus nisi
+          reprehenderit tempore, quis in fugit?
+        </p>
+        <a class="botao-link">Pague o seu agora</a>
+      </div>
+    </section>
+    <!--texto primeira página -> class caixa-principal-->
+
+    <section class="caixa-sobre" id="sobre">
+      <!--segunda página sobre nós-->
+      <h2 class="titulo"><span>SOBRE</span> NÓS</h2>
+
+      <div class="sobre-conteiner">
+        <div class="sobre-img">
+          <!--imagem about-->
+          <img src="imagens/about-img.jpeg" alt="" />
+        </div>
+        <!--imagem about clarr"sobre-img-->
+
+        <div class="sobre-txt">
+          <!--txt about-->
+          <h3>O que faz nosso café especial?</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, fugiat
+            alias vitae exercitationem aliquam odio aut dicta neque quas
+            aspernatur, ipsa voluptatibus corrupti omnis et eum voluptate itaque
+            maxime accusamus!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            consectetur fugiat minima fuga voluptate saepe ipsa totam nihil,
+            architecto dicta cumque quod, temporibus animi, dolore odio rem
+            perspiciatis harum qui!
+          </p>
+          <a class="botao-link">Saiba Mais</a>
+        </div>
+        <!--txt about class"sobre-txt-->
+      </div>
+      <!--sobre-conteiner-->
+    </section>
+    <!--segunda página sobre nós -> class"caixa-sobre"-->
+
+    <div class="modal">
+      <h3 class="titulo"><span>Nosso</span> Endereço</h3>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29634.60490710255!2d-49.6300321074499!3d-21.806346627639428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be467589002709%3A0x54c03e662abc324e!2sCafel%C3%A2ndia%2C%20SP%2C%2016500-000!5e0!3m2!1spt-BR!2sbr!4v1741063730724!5m2!1spt-BR!2sbr"
+        width="450"
+        height="350"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <!--mapa-->
+    </div>
+    <!--modal-->
+
+    <div class="mascara-mapa" onclick="EsconderModal()"></div>
+    <!--mascara-->
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

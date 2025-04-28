@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Certificados</title>
+</head>
+
+<body>
+    <div class="interface">
+        <section>
+            <div class="titulo">
+                <h1>MEUS <span>CERTIFICADOS</span></h1>
+            </div>
+        </section>
+    </div>
+
+    <main>
+        <section class="scroll-container">
+            <div class="imgs-esquerdo">
+                <img src="img/certificado alura.png" width="250" height="200">
+                <img src="img/certificado.png" width="250" height="200">
+                <img src="img/gestao-requisitos.png" width="250" height="200">
+                <img src="img/ia-alura.png" width="250" height="200">
+                <img src="img/inovacao.png" width="250" height="200">
+                <img src="img/lgpd.png" width="250" height="200">
+                <img src="img/pong.png" width="250" height="200">
+                <img src="img/redes-roteamento.png" width="250" height="200">
+                <img src="img/redes.png" width="250" height="200">
+                <img src="img/ia.png" width="250" height="200">
+                <img src="img/python.png" width="250" height="200">
+                <img src="img/Versionamento de Código com Git certificado.png" width="250" height="200">
+                <img src="img/Introdução à Plataforma Java certificado.png" width="250" height="200">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollContainer = document.querySelector(".scroll-container");
+            let isScrolling = false;
+
+            // Ajustando o evento 'wheel' para funcionar em toda a página
+            document.addEventListener("wheel", function (event) {
+                event.preventDefault(); // Previne o comportamento de rolagem vertical
+
+                if (!isScrolling) {
+                    isScrolling = true;
+                    const delta = event.deltaY;
+                    scrollContainer.scrollLeft += delta * 2; // Aumenta a sensibilidade (ajuste o valor para mais ou menos)
+
+                    setTimeout(() => {
+                        isScrolling = false;
+                    }, 100); // Define um pequeno atraso para controlar a taxa de scroll
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

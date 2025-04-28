@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fala Comigo</title>
+</head>
+
+<body>
+    <section class="formulario" id="contato">
+        <div class="interface">
+            <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+
+            <form id="form-contato">
+                <input type="text" id="nome" placeholder="Seu Nome Completo" required>
+                <input type="text" id="email" placeholder="Seu Email" required>
+                <input type="text" id="celular" placeholder="Seu Celular">
+                <textarea name="" id="mensagem" placeholder="Sua Mensagem" required></textarea>
+
+                <div class="btn-enviar"> <a href="https://wa.me/5511987633626/"><div class="btn-enviar"><input type="submit" value="ENVIAR"></div></a> </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formContato = document.getElementById('form-contato');
+            const nomeInput = document.getElementById('nome');
+            const emailInput = document.getElementById('email');
+            const celularInput = document.getElementById('celular');
+            const mensagemInput = document.getElementById('mensagem');
+            const numeroWhatsApp = '5511987633626'; // Seu número de WhatsApp
+
+            formContato.addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+
+                const nome = encodeURIComponent(nomeInput.value);
+                const email = encodeURIComponent(emailInput.value);
+                const celular = encodeURIComponent(celularInput.value);
+                const mensagem = encodeURIComponent(mensagemInput.value);
+
+                const textoWhatsApp = `Olá! Meu nome é ${nome}. Meu email é ${email}. Meu celular é ${celular}. Mensagem: ${mensagem}`;
+                const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoWhatsApp}`;
+
+                window.open(linkWhatsApp, '_blank'); // Abre o link do WhatsApp em uma nova aba
+
+                // Limpa os campos do formulário após o "envio" (abertura do link)
+                nomeInput.value = '';
+                emailInput.value = '';
+                celularInput.value = '';
+                mensagemInput.value = '';
+            });
+        });
+    </script>
+</body>
+
+</html>
